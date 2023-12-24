@@ -1,0 +1,16 @@
+
+<div class="container mt-5">
+  <button (click)="toggleVisualizzaSupereroi()">{{testoBottone}}</button>
+  <br>
+  <div class="row" *ngIf="visualizzaSupereroi && supereroi && supereroi.length > 0">
+    <div *ngFor="let supereroe of supereroi" class="col-sm-4">
+      <h3>{{supereroe.nome}}</h3>
+      <p>Prima apparizione: {{supereroe.primaApparizione}}</p>
+      <p>Poteri: {{supereroe.poteri}}</p>
+      <br><br><br>
+    </div>
+  </div>
+  <div *ngIf="!(visualizzaSupereroi && supereroi && supereroi.length > 0)">
+    <p>Nessun supereroe in vista. 👀</p>
+  </div>
+</div>

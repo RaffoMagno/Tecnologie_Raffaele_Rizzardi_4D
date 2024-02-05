@@ -1,0 +1,7 @@
+<h2>Basic Request</h2>
+<button type="button" (click)="makeRequest()">Request</button>
+<hr>
+<div *ngIf="loading">loading...</div>
+<pre>{{data | json}}</pre>
+<hr>
+<button type="button" (click)="makeCompactPost()">Post</button>

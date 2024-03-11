@@ -1,0 +1,17 @@
+doctype html
+html
+ head
+   title #{title}
+   link(rel='stylesheet', href='/css/style.css')
+   meta(name="viewport" content="width=device-width, initial-scale=1")
+ body
+   header.header
+         h1 #{title} del Raffo
+   article.container
+     each person in people
+       div.person
+         img(src=`/images/${person.imgSrc}`, alt="Immagine", style="width: 100px; height: auto;")
+         h2.person-name
+           | #{person.firstname} #{person.lastname}
+         a(href=`/profile?id=${person.id}`)
+           | View Profile

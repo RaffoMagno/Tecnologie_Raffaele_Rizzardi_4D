@@ -5,10 +5,18 @@ const app = express();
 app.set('view engine', 'pug');
 app.use(express.static(__dirname + '/public'));
 
-app.get('/', (req, res) => {
+app.get('/index', (req, res) => {
   res.render('index', {
-    title: 'Homepage',
-    people: people.profiles //Passa il vettore profiles alla pagina index.pug
+    title: 'Scegli il profilo',
+    people: people.profiles
+  });
+});
+
+
+app.get('/', (req, res) => {
+  res.render('pre-index', {
+    title: 'Premi il bottone',
+    people: people.profiles
   });
 });
 

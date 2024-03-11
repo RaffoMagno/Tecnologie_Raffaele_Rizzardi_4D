@@ -6,12 +6,12 @@ html
    meta(name="viewport" content="width=device-width, initial-scale=1")
  body
    header.header
-         h1 #{title} del Raffo
+         h1 #{title}
    article.container
      each person in people
        div.person
          img(src=`/images/${person.imgSrc}`, alt="Immagine", style="width: 100px; height: auto;")
          h2.person-name
            | #{person.firstname} #{person.lastname}
-         a(href=`/profile?id=${person.id}`)
+         a(type="button" href=`/profile?id=${person.id}`)
            | View Profile

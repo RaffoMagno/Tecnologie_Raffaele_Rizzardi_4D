@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title= song.title
+    title #{song.title}
     style.
       body {
         font-family: Arial, sans-serif;
@@ -9,19 +9,17 @@ html
         margin: 0;
         padding: 0;
       }
+      .demo {
+        background: #AECE1D;
+        background: -moz-linear-gradient(left, #AECE1D 0%, #1C6EA4 60%, #C50000 100%);
+        background: -webkit-linear-gradient(left, #AECE1D 0%, #1C6EA4 60%, #C50000 100%);
+        background: linear-gradient(to right, #AECE1D 0%, #1C6EA4 60%, #C50000 100%);
+        padding: 20px;
+      }
       h1 {
         margin-top: 20px;
       }
-      .song-details {
-        margin-top: 40px;
-        width: 50%;
-        margin: auto;
-        text-align: left;
-      }
-      h2 {
-        margin-top: 20px;
-      }
-      .detail-item {
+      p {
         margin-bottom: 10px;
       }
       img {
@@ -30,12 +28,19 @@ html
         max-width: 80%;
         height: auto;
       }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      a:hover {
+        color: #666;
+      }
 
   body
-    h1 #{song.title}
-    .song-details
-      h2 Author:
-      p #{song.author}
-      h2 Lyrics:
-      p #{song.lyrics}
-      img(src=song.thumbnail, alt=song.title)
+      h1 #{song.title}
+      .demo
+        p AUTORE: #{song.author}
+        p TESTO: #{song.lyrics}
+        img(src=`/immagini/${song.thumbnail}`)
+      br
+      a(href="/") Back to Menu

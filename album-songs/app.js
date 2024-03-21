@@ -1,29 +1,27 @@
 const express = require('express');
 const app = express();
-const path = require('path');
-const fs = require('fs');
+const songsData = require('./songs.json');
 
-// Leggi i dati dal file JSON
-const songsData = JSON.parse(fs.readFileSync('songs.json', 'utf-8'));
-
-// Imposta il motore di rendering Pug
-app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
+app.use(express.static('public'));
 
-// Gestisce la richiesta per la pagina principale
+// Index
 app.get('/', (req, res) => {
-  res.render('index', { songs: songsData.songs });
+  res.render('index');
 });
 
-// Gestisce la richiesta per la pagina di una singola canzone
+// Singole canzoni
 app.get('/song/:song_id', (req, res) => {
-  const songId = parseInt(req.params.song_id);
+  const songId = req.params.song_id;
   const song = songsData.songs.find(song => song.song_id === songId);
-  if (song) {
-    res.render('song', { song });
+  if (!song) {
   } else {
-    res.status(404).send('Song not found');
+    res.render('song', { song });
   }
+});
+
+app.get('/api/album-songs', (req, res) => {
+  res.json(songsData);
 });
 
 // Avvia il server sulla porta 3000

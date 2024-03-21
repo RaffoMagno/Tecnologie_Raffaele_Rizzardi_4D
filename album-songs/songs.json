@@ -1,25 +1,25 @@
 {
     "songs": [
       {
-        "song_id": 1,
+        "song_id": "1",
         "title": "Shape of You",
         "author": "Ed Sheeran",
         "lyrics": "The club isn't the best place to find a lover...",
-        "thumbnail": "https://example.com/shape_of_you_thumbnail.jpg"
+        "thumbnail": "Shape_Of_You.png"
       },
       {
-        "song_id": 2,
+        "song_id": "2",
         "title": "Bohemian Rhapsody",
         "author": "Queen",
         "lyrics": "Is this the real life? Is this just fantasy...",
-        "thumbnail": "https://example.com/bohemian_rhapsody_thumbnail.jpg"
+        "thumbnail": "Bohemian_Rapsody.jpg"
       },
       {
-        "song_id": 3,
-        "title": "Yesterday",
+        "song_id": "3",
+        "title": "Here Comes the Sun",
         "author": "The Beatles",
-        "lyrics": "Yesterday, all my troubles seemed so far away...",
-        "thumbnail": "https://example.com/yesterday_thumbnail.jpg"
+        "lyrics": "Here comes the sun, doo-doo-doo-doo...",
+        "thumbnail": "Here_Comes_the_Sun.jpg"
       }
     ]
   }

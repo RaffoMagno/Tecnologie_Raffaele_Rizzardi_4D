@@ -1,0 +1,61 @@
+doctype html
+html
+  head
+    title
+    style.
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        margin-top: 20px;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 20px auto;
+        width: 50%;
+        text-align: center;
+      }
+      li {
+        display: inline-block;
+        margin-right: 10px;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      a:hover {
+        color: #666;
+      }
+      .song-details {
+        margin-top: 40px;
+        width: 50%;
+        margin: auto;
+        text-align: left;
+      }
+      h2 {
+        margin-top: 20px;
+      }
+      .detail-item {
+        margin-bottom: 10px;
+      }
+
+  body
+    h1 Canzone bella
+    ul
+      each song in songs
+        li
+          a(href="/song/#{song.song_id}") #{song.title}
+    if song
+      .song-details
+        h2 #{song.title}
+        .detail-item
+          strong Author:
+          span #{song.author}
+        .detail-item
+          strong Lyrics:
+          span #{song.lyrics}
+        img(src=song.thumbnail, alt=song.title)

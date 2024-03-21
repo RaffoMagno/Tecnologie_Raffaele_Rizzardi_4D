@@ -1,0 +1,26 @@
+{
+    "songs": [
+      {
+        "song_id": 1,
+        "title": "Shape of You",
+        "author": "Ed Sheeran",
+        "lyrics": "The club isn't the best place to find a lover...",
+        "thumbnail": "https://example.com/shape_of_you_thumbnail.jpg"
+      },
+      {
+        "song_id": 2,
+        "title": "Bohemian Rhapsody",
+        "author": "Queen",
+        "lyrics": "Is this the real life? Is this just fantasy...",
+        "thumbnail": "https://example.com/bohemian_rhapsody_thumbnail.jpg"
+      },
+      {
+        "song_id": 3,
+        "title": "Yesterday",
+        "author": "The Beatles",
+        "lyrics": "Yesterday, all my troubles seemed so far away...",
+        "thumbnail": "https://example.com/yesterday_thumbnail.jpg"
+      }
+    ]
+  }
+  

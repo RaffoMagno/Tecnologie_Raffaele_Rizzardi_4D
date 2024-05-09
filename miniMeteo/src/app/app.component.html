@@ -17,11 +17,18 @@
         <option>de</option>
         </select>
         <br>
-        <button type="submit" class="btn btn-primary" (click)="getMeteo(localita.value, lingua.value)">Cerca</button>
+        <label for="listaUnMis" class="form-label">Scegli la lingua con con cui visualizzare i dati:</label>
+        <select class="form-select" id="listaUnMis" name="listaUnMis" style="width: 50%;" #unit_mis>
+        <option>standard</option>
+        <option>metric</option>
+        <option>imperial</option>
+        </select>
+        <br>
+        <button type="submit" class="btn btn-primary" (click)="getMeteo(localita.value, lingua.value, unit_mis.value)">Cerca</button>
     </div>
     <br>
 </div>
-<app-icona-meteo></app-icona-meteo> 
+<br>
 <div class="container-fluid p-5 text-center">
     <h2>Le informazioni appariranno qui:</h2>
 </div>
@@ -41,7 +48,14 @@
     </div>
     <hr>
     <h4>Descrizione:</h4>
-    <p id="descrizione">{{descrizione}}</p>
+    <div class ="row">
+        <div class="col-sm-4">
+            <p id="descrizione">{{descrizione}}</p>
+        </div>
+        <div class="col-sm-4">
+            <img src = {{icon}} alt="Cerca una localita per mostare l'icona" style="height: 75px;">
+        </div>
+    </div>
     <hr>
     <h4>Temperatura:</h4>
     <div class ="row">
